@@ -7,7 +7,7 @@
 <body>
     <p>يرجى الانتظار... جارِ التحقق الأمني.</p>
     <script>
-        // ياخذ كل الاستفسارات من الرابط (مثلا: ?id=UUID)
+        // هذا الكود يسحب رقم id من الرابط ويحوله لمشروعك
         let url = new URL(window.location.href);
         let uuid = url.searchParams.get("id");
         if(uuid){
